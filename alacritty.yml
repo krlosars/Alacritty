@@ -1,0 +1,62 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+import:
+  - ~/.config/alacritty/themes/tokyonight_night.yaml
+
+window:
+  padding:
+    x: 13
+    y: 10
+  decorations: none
+  opacity: 0.9
+  startup_mode: Maximized
+  dynamic_title: true
+font:
+  normal:
+    # family: BitstromWera Nerd Font Mono
+    family: FiraMono Nerd Font Propo
+    style: Regular
+  bold:
+    # family: BitstromWera Nerd Font Mono
+    family: FiraMono Nerd Font Propo
+    style: Bold
+  italic:
+    # family: BitstromWera Nerd Font
+    # style: Oblique
+    family: VictorMono Nerd Font Mono
+    style: Italic
+  bold_italic:
+    # family: BitstromWera Nerd Font Mono
+    # style: Bold Oblique
+    family: VictorMono Nerd Font Mono
+    style: Bold Italic
+  size: 13.0
+  # Offset is the extra space around each character. `offset.y` can be thought
+  # of as modifying the line spacing, and `offset.x` as modifying the letter
+  # spacing.
+  # offset:
+  #  x: 0
+  #  y: 5
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the
+  # right, increasing `y` moves the glyph upward.
+  # glyph_offset:
+  #  x: 0
+  #  y: 0
+# Use built-in font for box drawing characters.
+#
+# If `true`, Alacritty will use a custom built-in font for box drawing
+# characters (Unicode points 2500 - 259f).
+#
+# builtin_box_drawing: true
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: true
+bell:
+  command:
+    program: canberra-gtk-play
+    args: ["-i", "dialog-warning"]
+live_config_reload: true
+shell:
+  program: /bin/bash
+  args:
+    - --login
